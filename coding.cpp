@@ -99,7 +99,7 @@ int main(){
                 count++;
                 if(count == 8){
                     Out << tmp;
-					count ^= count;
+		    count ^= count;
                     tmp ^= tmp;
                 }
                 for(; bits_to_follow > 0; bits_to_follow--){
@@ -107,37 +107,37 @@ int main(){
                     count++;
                     if(count == 8){
                         Out << tmp;
-						count ^= count;
+			count ^= count;
                         tmp ^= tmp;
                     }
                 }
             } else 
-				if(low >= qtr2){
+		    if(low >= qtr2){
                     tmp = tmp | (1 << (7 - count));
                     count++;
                     if(count == 8){
                         Out << tmp;
-						count ^= count;
+			count ^= count;
                         tmp ^= tmp;
                     }                
                     for(; bits_to_follow > 0; bits_to_follow--){
                         count++;
                         if(count == 8){
                             Out << tmp;
-						    count ^= count;
+			    count ^= count;
                             tmp ^= tmp;
                         }
                     }
                     low -= qtr2;
                     high -= qtr2;
                 } else 
-					if(low >= qtr1 && high < qtr3){
+		    if(low >= qtr1 && high < qtr3){
                         bits_to_follow++;
                         low -= qtr1;
                         high -= qtr1;
                     }
                     else 
-						break;
+		        break;
             low += low;
             high += high + 1;
         }
