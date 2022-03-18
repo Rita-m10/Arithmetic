@@ -14,9 +14,9 @@ struct Interval{
 };
 
 struct Check{
-	bool operator() (Interval left, Interval right){
-		return left.key > right.key;
-	}
+    bool operator() (Interval left, Interval right){
+        return left.key > right.key;
+    }
 };
 
 list<Interval> CreateTab(map<char, int> Symbols){
@@ -44,12 +44,12 @@ list<Interval> CreateTab(map<char, int> Symbols){
 int main(){
     int count = 0;
     ifstream In("B.txt", ios::binary);
-	if (!In.is_open()){
+    if (!In.is_open()){
         cout << "error";
         return 0;
     }
-	ofstream Out("C.txt", ios::binary);
-	if (!Out.is_open()){
+    ofstream Out("C.txt", ios::binary);
+    if (!Out.is_open()){
         cout << "error";
         return 0;
     }
