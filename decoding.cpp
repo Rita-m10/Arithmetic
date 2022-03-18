@@ -85,17 +85,17 @@ int x, y;
         high = l + (it->right)*(high - l + 1)/divisor - 1;
         while(1){
             if(high >= qtr2)
-				if(low >= qtr2){
-                low -= qtr2; 
-                high -= qtr2; 
-                value -= qtr2;
+		if(low >= qtr2){
+                    low -= qtr2; 
+                    high -= qtr2; 
+                    value -= qtr2;
                 }else 
-					if((low >= qtr1) && (high < qtr3)){
+		    if((low >= qtr1) && (high < qtr3)){
                         low -= qtr1; 
                         high -= qtr1; 
                         value -= qtr1;
                     }else 
-						break;
+			break;
             low += low; 
             high += high + 1;
             value += value + (((short)c >> (7 - count)) & 1);
